@@ -6,7 +6,7 @@ export const siteConfig = {
 	phone: "(+84) 971631844",
 	github: "https://github.com/teq-trungnguyen",
 	linkedin: "https://linkedin.com/in/trungnguyen0403",
-	cv: "/NguyenNgocTrung_CV.pdf",
+	cv: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/NguyenNgocTrung_CV.pdf`,
 };
 
 export const experiences = [

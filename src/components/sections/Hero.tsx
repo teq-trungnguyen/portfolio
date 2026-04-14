@@ -142,7 +142,7 @@ export function Hero() {
 
 			{/* Background video */}
 			<video
-				src="/hero.mp4"
+				src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/hero.mp4`}
 				autoPlay
 				muted
 				loop
