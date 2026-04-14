@@ -1,7 +1,7 @@
 "use client";
 
-import { siteConfig } from "@/lib/data";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
+import { siteConfig } from "@/lib/data";
 
 export function Contact() {
 	const sectionRef = useRevealAnimation<HTMLElement>({ stagger: 0.12 });
@@ -17,8 +17,8 @@ export function Contact() {
 						Let&apos;s work together
 					</h2>
 					<p data-reveal className="text-zinc-400 text-lg leading-relaxed mb-10 opacity-0">
-						Have a project in mind or just want to chat? I&apos;m always open to new
-						opportunities, collaborations, or simply a good conversation about tech.
+						Have a project in mind or just want to chat? I&apos;m always open to new opportunities,
+						collaborations, or simply a good conversation about tech.
 					</p>
 
 					<div data-reveal className="flex flex-wrap gap-4 opacity-0">
@@ -67,8 +67,19 @@ export function Contact() {
 							href={`tel:${siteConfig.phone}`}
 							className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-medium text-sm transition-colors"
 						>
-							<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-								<path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+							<svg
+								className="w-4 h-4"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								strokeWidth={2}
+								aria-hidden="true"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+								/>
 							</svg>
 							{siteConfig.phone}
 						</a>
@@ -78,7 +89,16 @@ export function Contact() {
 							rel="noopener noreferrer"
 							className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-medium text-sm transition-colors"
 						>
-							<svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+							<svg
+								className="w-4 h-4"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								strokeWidth={2}
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								aria-hidden="true"
+							>
 								<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
 								<polyline points="14 2 14 8 20 8" />
 								<line x1="9" y1="13" x2="15" y2="13" />

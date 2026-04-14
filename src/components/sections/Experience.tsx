@@ -1,7 +1,7 @@
 "use client";
 
-import { experiences } from "@/lib/data";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
+import { experiences } from "@/lib/data";
 
 export function Experience() {
 	const sectionRef = useRevealAnimation<HTMLElement>({ stagger: 0.15 });
@@ -24,11 +24,7 @@ export function Experience() {
 
 					<div className="space-y-12">
 						{experiences.map((exp) => (
-							<div
-								key={exp.company}
-								data-reveal
-								className="opacity-0 md:pl-10 relative"
-							>
+							<div key={exp.company} data-reveal className="opacity-0 md:pl-10 relative">
 								{/* Dot */}
 								<div className="hidden md:flex absolute left-0 top-1.5 w-2 h-2 -translate-x-[3.5px] rounded-full bg-violet-500 ring-4 ring-zinc-950" />
 
@@ -46,7 +42,10 @@ export function Experience() {
 
 										<ul className="space-y-2">
 											{exp.highlights.map((point) => (
-												<li key={point} className="flex items-start gap-3 text-zinc-400 text-sm leading-relaxed">
+												<li
+													key={point}
+													className="flex items-start gap-3 text-zinc-400 text-sm leading-relaxed"
+												>
 													<span className="mt-2 w-1 h-1 rounded-full bg-violet-500/60 shrink-0" />
 													{point}
 												</li>

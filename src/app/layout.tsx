@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { Preloader } from "@/components/ui/Preloader";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
+import { Preloader } from "@/components/ui/Preloader";
 import "./globals.css";
 
 const geist = Geist({

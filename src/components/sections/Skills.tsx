@@ -1,7 +1,7 @@
 "use client";
 
-import { skills } from "@/lib/data";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
+import { skills } from "@/lib/data";
 
 export function Skills() {
 	const sectionRef = useRevealAnimation<HTMLElement>({ stagger: 0.075 });

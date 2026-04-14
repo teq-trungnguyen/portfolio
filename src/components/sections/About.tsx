@@ -3,8 +3,8 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-import { education, siteConfig } from "@/lib/data";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
+import { education, siteConfig } from "@/lib/data";
 
 gsap.registerPlugin(ScrollTrigger);
 

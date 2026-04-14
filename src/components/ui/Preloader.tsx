@@ -33,7 +33,9 @@ export function Preloader() {
 			.to(bottomRef.current, { yPercent: 100, duration: 0.9, ease: "power4.inOut" }, "split")
 			.add(() => setDone(true));
 
-		return () => { tl.kill(); };
+		return () => {
+			tl.kill();
+		};
 	}, []);
 
 	if (done) return null;

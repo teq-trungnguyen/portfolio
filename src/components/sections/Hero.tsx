@@ -82,12 +82,7 @@ export function Hero() {
 					{ opacity: 1, y: 0, duration: 0.55, stagger: 0.12 },
 					"-=0.4"
 				)
-				.fromTo(
-					"[data-hero-scroll]",
-					{ opacity: 0 },
-					{ opacity: 1, duration: 0.6 },
-					"-=0.2"
-				);
+				.fromTo("[data-hero-scroll]", { opacity: 0 }, { opacity: 1, duration: 0.6 }, "-=0.2");
 
 			// Parallax on glows
 			gsap.to("[data-glow-1]", {
@@ -186,10 +181,7 @@ export function Hero() {
 							</span>
 						</span>
 						<span className="block">
-							<span
-								ref={nameRef}
-								className="inline-block opacity-0 font-mono text-white"
-							>
+							<span ref={nameRef} className="inline-block opacity-0 font-mono text-white">
 								{siteConfig.name}
 							</span>
 						</span>
