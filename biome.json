@@ -7,7 +7,8 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"ignore": ["node_modules", ".next", "public"]
+		"ignore": ["node_modules", ".next", "public"],
+		"includes": ["**/src/**", "!**/src/stories", "!**/src/routeTree.gen.ts", "!**/src/api"]
 	},
 	"formatter": {
 		"enabled": true,
