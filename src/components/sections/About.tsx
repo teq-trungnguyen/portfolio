@@ -73,29 +73,31 @@ export function About() {
 					{/* Education */}
 					<div
 						data-reveal
-						className="opacity-0 flex items-start gap-4 p-4 rounded-xl border border-zinc-800/50 bg-zinc-900/30"
+						className="opacity-0 rounded-xl p-px bg-linear-to-br from-violet-500/20 via-zinc-800/10 to-cyan-500/15 hover:from-violet-500/50 hover:to-cyan-500/40 transition-all duration-300"
 					>
-						<div className="w-9 h-9 shrink-0 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
-							<svg
-								className="w-4 h-4"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								strokeWidth={2}
-								aria-hidden="true"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m-4-3h8"
-								/>
-							</svg>
-						</div>
-						<div>
-							<p className="text-white font-medium text-sm">{education.degree}</p>
-							<p className="text-zinc-500 text-xs mt-0.5">
-								{education.school} · {education.period}
-							</p>
+						<div className="flex items-start gap-4 p-4 rounded-[calc(0.75rem-1px)] bg-zinc-950/80 backdrop-blur-sm">
+							<div className="w-9 h-9 shrink-0 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
+								<svg
+									className="w-4 h-4"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									strokeWidth={2}
+									aria-hidden="true"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m-4-3h8"
+									/>
+								</svg>
+							</div>
+							<div>
+								<p className="text-white font-medium text-sm">{education.degree}</p>
+								<p className="text-zinc-500 text-xs mt-0.5">
+									{education.school} · {education.period}
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -105,14 +107,16 @@ export function About() {
 					{stats.map((stat) => (
 						<div
 							key={stat.label}
-							className="p-6 rounded-2xl border border-zinc-800/50 bg-zinc-900/30 hover:border-violet-500/30 hover:bg-violet-500/5 transition-colors group"
+							className="rounded-2xl p-px bg-linear-to-br from-violet-500/20 via-zinc-800/10 to-cyan-500/15 hover:from-violet-500/50 hover:to-cyan-500/40 transition-all duration-300 group"
 						>
-							<div className="text-4xl font-bold text-white mb-2 font-mono tabular-nums">
-								<span data-count={stat.number}>0</span>
-								<span className="text-violet-400">{stat.suffix}</span>
-							</div>
-							<div className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">
-								{stat.label}
+							<div className="h-full rounded-[calc(1rem-1px)] bg-zinc-950/80 backdrop-blur-sm p-6">
+								<div className="text-4xl font-bold text-white mb-2 font-mono tabular-nums">
+									<span data-count={stat.number}>0</span>
+									<span className="text-violet-400">{stat.suffix}</span>
+								</div>
+								<div className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">
+									{stat.label}
+								</div>
 							</div>
 						</div>
 					))}

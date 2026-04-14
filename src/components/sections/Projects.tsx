@@ -52,33 +52,35 @@ export function Projects() {
 							key={project.id}
 							data-card
 							data-reveal
-							className="group relative opacity-0 rounded-3xl border border-zinc-800/60 bg-zinc-900/30 p-7 flex flex-col justify-between overflow-hidden hover:border-violet-500/40 hover:bg-violet-500/5 transition-colors"
+							className="group opacity-0 rounded-3xl p-px bg-linear-to-br from-violet-500/20 via-zinc-800/10 to-cyan-500/15 hover:from-violet-500/50 hover:to-cyan-500/40 transition-all duration-300"
 							style={{ transformStyle: "preserve-3d", perspective: "800px" }}
 						>
-							{/* Large background number */}
-							<span className="absolute -bottom-4 -right-2 text-[100px] font-black text-zinc-800/25 select-none leading-none group-hover:text-violet-900/20 transition-colors duration-500 pointer-events-none">
-								{String(project.id).padStart(2, "0")}
-							</span>
+							<div className="relative h-full rounded-[calc(1.5rem-1px)] bg-zinc-950/80 backdrop-blur-sm p-7 flex flex-col justify-between overflow-hidden">
+								{/* Large background number */}
+								<span className="absolute -bottom-4 -right-2 text-[100px] font-black text-zinc-800/25 select-none leading-none group-hover:text-violet-900/20 transition-colors duration-500 pointer-events-none">
+									{String(project.id).padStart(2, "0")}
+								</span>
 
-							<div className="relative z-10">
-								<div className="flex items-center justify-between mb-6">
-									<span className="text-xs font-mono text-zinc-600">{project.year}</span>
+								<div className="relative z-10">
+									<div className="flex items-center justify-between mb-6">
+										<span className="text-xs font-mono text-zinc-600">{project.year}</span>
+									</div>
+									<h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors leading-snug">
+										{project.title}
+									</h3>
+									<p className="text-zinc-500 text-sm leading-relaxed">{project.description}</p>
 								</div>
-								<h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors leading-snug">
-									{project.title}
-								</h3>
-								<p className="text-zinc-500 text-sm leading-relaxed">{project.description}</p>
-							</div>
 
-							<div className="relative z-10 mt-6 flex flex-wrap gap-2">
-								{project.tags.map((tag) => (
-									<span
-										key={tag}
-										className="px-2.5 py-1 text-xs rounded-full bg-zinc-800/70 text-zinc-400 border border-zinc-700/50 group-hover:border-violet-500/20 transition-colors"
-									>
-										{tag}
-									</span>
-								))}
+								<div className="relative z-10 mt-6 flex flex-wrap gap-2">
+									{project.tags.map((tag) => (
+										<span
+											key={tag}
+											className="px-2.5 py-1 text-xs rounded-full bg-zinc-800/70 text-zinc-400 border border-zinc-700/50 group-hover:border-violet-500/20 transition-colors"
+										>
+											{tag}
+										</span>
+									))}
+								</div>
 							</div>
 						</div>
 					))}

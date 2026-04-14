@@ -118,7 +118,7 @@ export function Hero() {
 	return (
 		<section
 			ref={containerRef}
-			className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden"
+			className="relative min-h-screen flex flex-col justify-center px-6 pb-28 overflow-hidden"
 		>
 			{/* Grain */}
 			<div
@@ -140,6 +140,19 @@ export function Hero() {
 				}}
 			/>
 
+			{/* Background video */}
+			<video
+				src="/hero.mp4"
+				autoPlay
+				muted
+				loop
+				playsInline
+				className="absolute inset-0 w-full h-full object-cover"
+			/>
+
+			{/* Dark overlay for readability */}
+			<div className="absolute inset-0 z-1 bg-zinc-950/70" />
+
 			{/* Glows */}
 			<div
 				data-glow-1
@@ -151,91 +164,94 @@ export function Hero() {
 			/>
 
 			<div className="relative z-10 max-w-6xl mx-auto w-full pt-24">
-				{/* Badge */}
-				<p
-					data-hero-tag
-					className="opacity-0 inline-flex items-center gap-2 text-sm text-violet-400 font-mono mb-8 px-3 py-1.5 rounded-full border border-violet-500/20 bg-violet-500/5"
-				>
-					<span className="inline-block w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
-					Available for new opportunities
-				</p>
-
-				{/* Heading */}
-				<h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] mb-8">
-					<span className="block overflow-hidden">
-						<span
-							data-hero-hi
-							className="inline-block opacity-0 text-zinc-500 text-2xl sm:text-3xl font-mono mb-1"
-						>
-							My's name --
-						</span>
-					</span>
-					<span className="block">
-						<span
-							ref={nameRef}
-							className="inline-block opacity-0 font-mono text-white"
-						>
-							{siteConfig.name}
-						</span>
-					</span>
-					<span className="block mt-1">
-						<span
-							ref={roleRef}
-							className="inline-block opacity-0 text-transparent bg-clip-text bg-linear-to-r from-violet-400 to-indigo-400 text-3xl sm:text-4xl lg:text-5xl font-medium"
-						>
-							{siteConfig.role}
-						</span>
-					</span>
-				</h1>
-
-				<p
-					data-hero-bio
-					className="opacity-0 max-w-xl text-zinc-400 text-lg leading-relaxed mb-10"
-				>
-					{siteConfig.bio}
-				</p>
-
-				{/* CTAs with magnetic effect */}
-				<div className="flex flex-wrap gap-4">
-					<a
-						ref={ctaPrimaryRef}
-						data-hero-cta
-						href="#projects"
-						onClick={(e) => {
-							e.preventDefault();
-							document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
-						}}
-						className="opacity-0 group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm transition-colors overflow-hidden"
+				{/* Text content */}
+				<div>
+					{/* Badge */}
+					<p
+						data-hero-tag
+						className="opacity-0 inline-flex items-center gap-2 text-sm text-violet-400 font-mono mb-8 px-3 py-1.5 rounded-full border border-violet-500/20 bg-violet-500/5"
 					>
-						<span className="relative z-10">View my work</span>
-						<svg
-							className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							strokeWidth={2}
-							aria-hidden="true"
-						>
-							<path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5-5 5M6 12h12" />
-						</svg>
-					</a>
-					<a
-						ref={ctaSecondaryRef}
-						data-hero-cta
-						href={`mailto:${siteConfig.email}`}
-						className="opacity-0 px-7 py-3.5 rounded-full border border-zinc-700 hover:border-violet-500/50 text-zinc-300 hover:text-white font-semibold text-sm transition-all duration-300"
+						<span className="inline-block w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
+						Available for new opportunities
+					</p>
+
+					{/* Heading */}
+					<h1 className="text-5xl sm:text-7xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1] mb-8">
+						<span className="block overflow-hidden">
+							<span
+								data-hero-hi
+								className="inline-block opacity-0 text-zinc-500 text-2xl sm:text-3xl font-mono mb-1"
+							>
+								My's name -
+							</span>
+						</span>
+						<span className="block">
+							<span
+								ref={nameRef}
+								className="inline-block opacity-0 font-mono text-white"
+							>
+								{siteConfig.name}
+							</span>
+						</span>
+						<span className="block mt-1">
+							<span
+								ref={roleRef}
+								className="inline-block opacity-0 text-transparent bg-clip-text bg-linear-to-r from-violet-400 to-indigo-400 text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-medium"
+							>
+								{siteConfig.role}
+							</span>
+						</span>
+					</h1>
+
+					<p
+						data-hero-bio
+						className="opacity-0 max-w-xl text-zinc-400 text-lg leading-relaxed mb-10"
 					>
-						Get in touch
-					</a>
+						{siteConfig.bio}
+					</p>
+
+					{/* CTAs with magnetic effect */}
+					<div className="flex flex-wrap gap-4">
+						<a
+							ref={ctaPrimaryRef}
+							data-hero-cta
+							href="#projects"
+							onClick={(e) => {
+								e.preventDefault();
+								document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+							}}
+							className="opacity-0 group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm transition-colors overflow-hidden"
+						>
+							<span className="relative z-10">View my work</span>
+							<svg
+								className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								strokeWidth={2}
+								aria-hidden="true"
+							>
+								<path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5-5 5M6 12h12" />
+							</svg>
+						</a>
+						<a
+							ref={ctaSecondaryRef}
+							data-hero-cta
+							href={`mailto:${siteConfig.email}`}
+							className="opacity-0 px-7 py-3.5 rounded-full border border-zinc-700 hover:border-violet-500/50 text-zinc-300 hover:text-white font-semibold text-sm transition-all duration-300"
+						>
+							Get in touch
+						</a>
+					</div>
 				</div>
 			</div>
 
 			{/* Scroll indicator */}
 			<div
 				data-hero-scroll
-				className="opacity-0 absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+				className="opacity-0 absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
 			>
-				<span className="text-zinc-600 text-[10px] font-mono tracking-[0.2em] uppercase">
+				<span className="text-zinc-100 text-[10px] font-mono tracking-[0.2em] uppercase">
 					scroll
 				</span>
 				<div className="relative w-px h-16 bg-zinc-800 overflow-hidden">
