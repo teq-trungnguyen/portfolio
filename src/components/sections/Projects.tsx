@@ -9,7 +9,7 @@ import { useRevealAnimation } from "@/hooks/useRevealAnimation";
 gsap.registerPlugin(ScrollTrigger);
 
 export function Projects() {
-	const sectionRef = useRevealAnimation<HTMLElement>({ stagger: 0.15 });
+	const sectionRef = useRevealAnimation<HTMLElement>({ stagger: 0.075 });
 	const gridRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -62,9 +62,6 @@ export function Projects() {
 								</span>
 
 								<div className="relative z-10">
-									<div className="flex items-center justify-between mb-6">
-										<span className="text-xs font-mono text-zinc-600">{project.year}</span>
-									</div>
 									<h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors leading-snug">
 										{project.title}
 									</h3>

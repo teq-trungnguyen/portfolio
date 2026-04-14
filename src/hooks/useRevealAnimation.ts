@@ -25,17 +25,17 @@ export function useRevealAnimation<T extends HTMLElement>(
 		const targets = el.querySelectorAll("[data-reveal]");
 		const animTargets = targets.length > 0 ? Array.from(targets) : [el];
 
-		// Clip-path wipe-up: elements start fully clipped from bottom, wipe into view
+		// Fade + subtle slide up
 		gsap.fromTo(
 			animTargets,
-			{ clipPath: "inset(0 0 100% 0)", opacity: 1 },
+			{ opacity: 0, y: 24 },
 			{
-				clipPath: "inset(0 0 0% 0)",
 				opacity: 1,
+				y: 0,
 				duration,
 				stagger,
 				delay,
-				ease: "power4.out",
+				ease: "power3.out",
 				scrollTrigger: {
 					trigger: el,
 					start: "top 88%",

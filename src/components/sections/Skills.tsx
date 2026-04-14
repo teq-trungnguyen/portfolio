@@ -4,7 +4,7 @@ import { skills } from "@/lib/data";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
 
 export function Skills() {
-	const sectionRef = useRevealAnimation<HTMLElement>({ stagger: 0.12 });
+	const sectionRef = useRevealAnimation<HTMLElement>({ stagger: 0.075 });
 	const allSkillItems = skills.flatMap((g) => g.items);
 
 	// interleave a separator between each item

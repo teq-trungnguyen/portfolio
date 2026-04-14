@@ -3,9 +3,10 @@ export const siteConfig = {
 	role: "Front-End Developer",
 	bio: "Front-End Developer with over 4 years of experience specializing in React, Vue, Next.js, Nuxt.js, and TypeScript. Focused on building clean, fast, and user-friendly web applications.",
 	email: "nntrung0403@gmail.com",
-	phone: "(+84) 971-631-844",
-	github: "https://github.com/nntrung0403",
-	linkedin: "https://linkedin.com/in/nntrung0403",
+	phone: "(+84) 971631844",
+	github: "https://github.com/teq-trungnguyen",
+	linkedin: "https://linkedin.com/in/trungnguyen0403",
+	cv: "/NguyenNgocTrung_CV.pdf",
 };
 
 export const experiences = [

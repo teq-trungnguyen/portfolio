@@ -54,13 +54,10 @@ export function Preloader() {
 				</span>
 			</div>
 
-			{/* Center split line */}
-			<div className="absolute inset-x-0 top-1/2 h-px bg-zinc-800/80 -translate-y-px z-10" />
-
 			{/* Bottom half */}
 			<div
 				ref={bottomRef}
-				className="absolute inset-x-0 bottom-0 h-1/2 bg-zinc-950 flex flex-col items-center justify-start pt-10 gap-4"
+				className="absolute inset-x-0 bottom-0 h-1/2 bg-zinc-950 flex flex-col items-center justify-start gap-4"
 			>
 				{/* Progress bar */}
 				<div className="w-52 h-px bg-zinc-800 overflow-hidden">

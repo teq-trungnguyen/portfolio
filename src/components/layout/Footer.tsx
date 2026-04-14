@@ -5,7 +5,7 @@ export function Footer() {
 		<footer className="border-t border-zinc-800/50 py-8">
 			<div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
 				<p>
-					&copy; {new Date().getFullYear()} {siteConfig.name}. Built with Next.js & GSAP.
+					&copy; {siteConfig.name} - {2024}
 				</p>
 				<div className="flex items-center gap-6">
 					<a
